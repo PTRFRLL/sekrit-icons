@@ -1,11 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import Footer from "../components/Footer";
 import Icons from "../components/Icons";
 import Link from "../components/Link";
 import { ICONS } from "../data";
 import InputImg from "../public/input.JPG";
+import { COLORS } from "../styles/constants";
 
 export default function Home() {
   return (
@@ -14,12 +15,22 @@ export default function Home() {
         <title>Apollo Icons | The Sekrit Booty</title>
         <meta name="description" content="Apollo icons" />
         <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="theme-color"
+          content={COLORS.primary}
+          media="(prefers-color-scheme: light)"
+        />
+        <meta
+          name="theme-color"
+          content={COLORS.dark}
+          media="(prefers-color-scheme: dark)"
+        />
       </Head>
       <Container>
         <Content>
-          <h1>
+          <H1>
             Apollo <StrikeThrough>Sekrit</StrikeThrough> Icons
-          </h1>
+          </H1>
           <h2>What?</h2>
           <p>
             <Link href="https://apolloapp.io/">Apollo</Link> for iOS. The best
@@ -43,6 +54,10 @@ export default function Home() {
     </>
   );
 }
+
+const H1 = styled.h1`
+  color: ${COLORS.primary};
+`;
 
 const HelpText = styled.p`
   font-weight: 600;

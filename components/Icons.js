@@ -1,6 +1,7 @@
 import { toPng } from "html-to-image";
 import { useRef, useState } from "react";
 import styled from "styled-components";
+import { COLORS } from "../styles/constants";
 import IconItem from "./IconItem";
 
 const Icons = ({ icons }) => {
@@ -19,7 +20,7 @@ const Icons = ({ icons }) => {
 
   return (
     <>
-      <div ref={ref}>
+      <Container ref={ref}>
         {icons.map((icon) => (
           <IconItem
             key={icon.name}
@@ -29,7 +30,7 @@ const Icons = ({ icons }) => {
             note={icon.note}
           />
         ))}
-      </div>
+      </Container>
       <Button disabled={loading} onClick={generateImage}>
         {loading ? "Exporting..." : "Export as Image"}
       </Button>
@@ -37,10 +38,14 @@ const Icons = ({ icons }) => {
   );
 };
 
+const Container = styled.div`
+  background-color: ${COLORS.dark};
+`;
+
 const Button = styled.button`
-  color: #fff;
+  color: ${COLORS.white};
   text-transform: uppercase;
-  background: #ed3330;
+  background: ${COLORS.primary};
   padding: 20px;
   border-radius: 5px;
   border: none;
@@ -49,7 +54,8 @@ const Button = styled.button`
   cursor: pointer;
 
   &:hover {
-    background: black;
+    background: ${COLORS.white};
+    color: ${COLORS.primary};
   }
 
   @media (min-width: 768px) {

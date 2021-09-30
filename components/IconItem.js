@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { useState } from "react";
 import styled from "styled-components";
+import { COLORS } from "../styles/constants";
 
 const IconItem = ({ icon, code, name, note }) => {
   const [copied, setCopied] = useState("");
@@ -55,12 +55,12 @@ const CodeContainer = styled.div`
 `;
 
 const Note = styled.p`
-  color: #6c757d;
+  color: ${COLORS.muted};
   font-size: 0.85rem;
 `;
 
 const SuccessText = styled.p`
-  color: #28a745;
+  color: ${COLORS.primary};
 `;
 
 export default IconItem;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { COLORS } from "../styles/constants";
 
 const Link = ({ href, children }) => (
   <StyledLink href={href} rel="noreferrer" target="_blank">
@@ -7,7 +8,7 @@ const Link = ({ href, children }) => (
 );
 
 const StyledLink = styled.a`
-  color: #ed3330;
+  color: ${COLORS.primary};
   text-decoration: none;
   &:hover {
     text-decoration: underline;
