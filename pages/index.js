@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>The Sekrit Booty</title>
+        <title>Apollo Icons | The Sekrit Booty</title>
         <meta name="description" content="Apollo icons" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -29,7 +29,7 @@ export default function Home() {
           <h2>How?</h2>
           <HelpText>{"Settings > About > Shake your device"}</HelpText>
           <Image src={InputImg} alt="Code input" />
-          <h2>Codes</h2>
+          <h2 id="codes">Codes</h2>
           <Icons icons={ICONS} />
         </Content>
       </Container>
@@ -49,8 +49,8 @@ const Container = styled.div`
 `;
 
 const Content = styled.div`
-  max-width: 700px;
-  width: 80%;
+  max-width: 550px;
+  width: 90%;
   text-align: center;
 `;
 

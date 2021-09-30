@@ -13,7 +13,7 @@ const IconItem = ({ icon, code, name, note }) => {
     setCopied("Copied to clipboard!");
     setTimeout(() => {
       setCopied("");
-    }, 2000);
+    }, 1500);
   };
 
   return (
@@ -37,8 +37,9 @@ const IconItem = ({ icon, code, name, note }) => {
 const IconContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  margin: 16px 0;
+  padding: 16px 0;
   cursor: pointer;
+  border-bottom: 1px solid lightgrey;
 `;
 
 const CodeContainer = styled.div`
@@ -55,6 +56,7 @@ const CodeContainer = styled.div`
 
 const Note = styled.p`
   color: #6c757d;
+  font-size: 0.75rem;
 `;
 
 const SuccessText = styled.p`

@@ -44,6 +44,7 @@ const Button = styled.button`
   padding: 20px;
   border-radius: 5px;
   border: none;
+  margin-top: 1rem;
 `;
 
 export default Icons;
