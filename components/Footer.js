@@ -12,8 +12,9 @@ const Footer = () => {
       </div>
       <div>
         <p>
+          Missing a code?{" "}
           <Link href="https://github.com/PTRFRLL/sekrit-icons">
-            Source on GitHub
+            Contribute on GitHub
           </Link>
         </p>
       </div>

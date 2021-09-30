@@ -24,7 +24,13 @@ export default function Home() {
           <p>
             <Link href="https://apolloapp.io/">Apollo</Link> for iOS. The best
             Reddit client out there created by a{" "}
-            <Link href="https://twitter.com/christianselig">good dude.</Link>
+            <Link href="https://twitter.com/christianselig">good dude</Link>.
+            Apollo has a bunch of great app icons to choose from, some of which
+            are "secret". This is how to unlock those icons.
+          </p>
+          <p>
+            <strong>Note:</strong> Changing the app icon is a feature of{" "}
+            <Link href="https://apolloapp.io/pro-ultra/">Apollo Pro</Link>
           </p>
           <h2>How?</h2>
           <HelpText>{"Settings > About > Shake your device"}</HelpText>
