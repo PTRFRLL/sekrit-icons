@@ -19,7 +19,7 @@ const IconItem = ({ icon, code, name, note }) => {
   return (
     <IconContainer onClick={copyCode}>
       <div>
-        <img src={icon} alt={`${code} icon`} width={100} height={100} />
+        <img src={icon} alt={`${code} icon`} width={80} height={80} />
       </div>
       <CodeContainer>
         {copied && <SuccessText>{copied}</SuccessText>}
@@ -37,7 +37,7 @@ const IconItem = ({ icon, code, name, note }) => {
 const IconContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 16px 0;
+  padding: 1rem;
   cursor: pointer;
   border-bottom: 1px solid lightgrey;
 `;
@@ -56,7 +56,7 @@ const CodeContainer = styled.div`
 
 const Note = styled.p`
   color: #6c757d;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
 `;
 
 const SuccessText = styled.p`

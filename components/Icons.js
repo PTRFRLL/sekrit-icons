@@ -11,8 +11,9 @@ const Icons = ({ icons }) => {
     setLoading(true);
     const image = await toPng(ref.current);
     const downloadLink = document.createElement("a");
-    downloadLink.download = "icons.png";
+    //downloadLink.download = "icons.png";
     downloadLink.href = image;
+    downloadLink.target = "_blank";
     downloadLink.click();
     setLoading(false);
   };
@@ -31,7 +32,7 @@ const Icons = ({ icons }) => {
         ))}
       </div>
       <Button disabled={loading} onClick={generateImage}>
-        Export as Image
+        {loading ? "Exporting..." : "Export as Image"}
       </Button>
     </>
   );
@@ -45,6 +46,16 @@ const Button = styled.button`
   border-radius: 5px;
   border: none;
   margin-top: 1rem;
+  width: 90%;
+  cursor: pointer;
+
+  &:hover {
+    background: black;
+  }
+
+  @media (min-width: 768px) {
+    width: 60%;
+  }
 `;
 
 export default Icons;
