@@ -1,13 +1,13 @@
 import Head from "next/head";
 import Image from "next/image";
 import styled from "styled-components";
-import IconTable from "../components/IconTable";
+import Footer from "../components/Footer";
+import Icons from "../components/Icons";
+import Link from "../components/Link";
 import { ICONS } from "../data";
 import InputImg from "../public/input.JPG";
 
 export default function Home() {
-  const icons = ICONS;
-
   return (
     <>
       <Head>
@@ -22,22 +22,24 @@ export default function Home() {
           </h1>
           <h3>What?</h3>
           <p>
-            <a href="https://apolloapp.io/" target="_blank"  rel="noreferrer">Apollo</a> for iOS. The best Reddit client out there created by a{" "}
-            <a href="https://twitter.com/christianselig" target="_blank" rel="noreferrer">good dude.</a>
+            <Link href="https://apolloapp.io/">Apollo</Link> for iOS. The best
+            Reddit client out there created by a{" "}
+            <Link href="https://twitter.com/christianselig">good dude.</Link>
           </p>
           <h3>How?</h3>
           <HelpText>{"Settings > About > Shake your device"}</HelpText>
           <Image src={InputImg} alt="Code input" />
           <h3>Codes</h3>
-          <IconTable icons={icons} />
+          <Icons icons={ICONS} />
         </Content>
       </Container>
+      <Footer />
     </>
   );
 }
 
 const HelpText = styled.p`
-  font-weight: 500;
+  font-weight: 600;
 `;
 
 const Container = styled.div`
