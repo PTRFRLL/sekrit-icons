@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import Icons from "../components/Icons";
 import Link from "../components/Link";
 import { ICONS } from "../data";
-import InputImg from "../public/input.JPG";
+import InputImg from "../public/input.png";
 import { COLORS } from "../styles/constants";
 
 export default function Home() {
