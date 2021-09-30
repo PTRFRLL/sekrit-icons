@@ -45,7 +45,7 @@ export default function Home() {
           </p>
           <h2>How?</h2>
           <HelpText>{"Settings > About > Shake your device"}</HelpText>
-          <Image src={InputImg} alt="Code input" />
+          <Image priority={true} src={InputImg} alt="Code input" />
           <h2 id="codes">Codes</h2>
           <Icons icons={ICONS} />
         </Content>
