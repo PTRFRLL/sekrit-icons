@@ -11,9 +11,8 @@ const Icons = ({ icons }) => {
     setLoading(true);
     const image = await toPng(ref.current);
     const downloadLink = document.createElement("a");
-    //downloadLink.download = "icons.png";
+    downloadLink.download = "icons.png";
     downloadLink.href = image;
-    downloadLink.target = "_blank";
     downloadLink.click();
     setLoading(false);
   };
