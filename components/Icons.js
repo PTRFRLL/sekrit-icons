@@ -1,17 +1,20 @@
 import { toPng } from "html-to-image";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import styled from "styled-components";
 import IconItem from "./IconItem";
 
 const Icons = ({ icons }) => {
   const ref = useRef();
+  const [loading, setLoading] = useState(false);
 
   const generateImage = async () => {
+    setLoading(true);
     const image = await toPng(ref.current);
     const downloadLink = document.createElement("a");
     downloadLink.download = "icons.png";
     downloadLink.href = image;
     downloadLink.click();
+    setLoading(false);
   };
 
   return (
@@ -27,7 +30,9 @@ const Icons = ({ icons }) => {
           />
         ))}
       </div>
-      <Button onClick={generateImage}>Export as Image</Button>
+      <Button disabled={loading} onClick={generateImage}>
+        Export as Image
+      </Button>
     </>
   );
 };

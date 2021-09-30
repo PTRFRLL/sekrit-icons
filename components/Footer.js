@@ -5,7 +5,10 @@ const Footer = () => {
   return (
     <StyledFooter>
       <div>
-        <p>Created by <Link href='https://twitter.com/PTRFRLL'>@PTRFRLL</Link></p>
+        <p>
+          Created by <Link href="https://twitter.com/PTRFRLL">@PTRFRLL</Link> |{" "}
+          {new Date().getFullYear()}
+        </p>
       </div>
       <div>
         <p>
@@ -28,13 +31,12 @@ const StyledFooter = styled.footer`
   margin-top: 16px;
 
   p {
-      margin: 5px;
+    margin: 5px;
   }
 
-
   @media (min-width: 768px) {
-      flex-direction: row;
-      height: 100px;
+    flex-direction: row;
+    height: 100px;
   }
 `;
 

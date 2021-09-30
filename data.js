@@ -7,7 +7,7 @@ export const ICONS = [
   {
     name: `Phil`,
     icon: "/icons/canada.png",
-    code: "throatpunch",
+    code: ["throatpunch", "phil"],
   },
   {
     name: `Canada D'eh`,
@@ -43,7 +43,7 @@ export const ICONS = [
   {
     name: `Sloth-Kun`,
     icon: "/icons/ernest.png",
-    code: "slothkun",
+    code: ["slothkun", "sloth"],
     note: "Requires SPCA donation",
   },
   {
@@ -74,17 +74,17 @@ export const ICONS = [
   {
     name: `Pro Wrestler`,
     icon: "/icons/ernest.png",
-    code: "prowrestler",
+    code: ["prowrestler", "andru"],
   },
   {
     name: `A+ Intontation`,
     icon: "/icons/ernest.png",
-    code: "montrealbagels",
+    code: ["montrealbagels", "rene"],
   },
   {
     name: `Yo. Jonathan Here.`,
     icon: "/icons/ernest.png",
-    code: "jellyfish",
+    code: ["jellyfish", "tld"],
   },
   {
     name: `Margaret`,

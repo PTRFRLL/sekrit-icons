@@ -1,15 +1,34 @@
 import Image from "next/image";
+import { useState } from "react";
 import styled from "styled-components";
 
 const IconItem = ({ icon, code, name, note }) => {
+  const [copied, setCopied] = useState("");
+  const copyCode = () => {
+    let codeToCopy = code;
+    if (typeof code === "object") {
+      codeToCopy = code[Math.floor(Math.random() * code.length)];
+    }
+    navigator.clipboard.writeText(codeToCopy);
+    setCopied("Copied to clipboard!");
+    setTimeout(() => {
+      setCopied("");
+    }, 2000);
+  };
+
   return (
-    <IconContainer>
+    <IconContainer onClick={copyCode}>
       <div>
         <img src={icon} alt={`${code} icon`} width={100} height={100} />
       </div>
       <CodeContainer>
-        <code>{code}</code>
-        {note && <Note>{note}</Note>}
+        {copied && <SuccessText>{copied}</SuccessText>}
+        {!copied && (
+          <>
+            <code>{typeof code === "object" ? code.join(", ") : code}</code>
+            {note && <Note>{note}</Note>}
+          </>
+        )}
       </CodeContainer>
     </IconContainer>
   );
@@ -19,11 +38,13 @@ const IconContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 16px 0;
+  cursor: pointer;
 `;
 
 const CodeContainer = styled.div`
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: end;
   justify-content: center;
   text-align: center;
 
@@ -33,11 +54,11 @@ const CodeContainer = styled.div`
 `;
 
 const Note = styled.p`
-  &::before {
-    content: "\a";
-    white-space: pre;
-  }
-  color: grey;
+  color: #6c757d;
+`;
+
+const SuccessText = styled.p`
+  color: #28a745;
 `;
 
 export default IconItem;
