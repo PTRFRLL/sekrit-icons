@@ -26,7 +26,7 @@ export default function Home() {
             Reddit client out there created by a{" "}
             <Link href="https://twitter.com/christianselig">good dude</Link>.
             Apollo has a bunch of great app icons to choose from, some of which
-            are "secret". This is how to unlock those icons.
+            are &quot;secret&quot;. This is how to unlock those icons.
           </p>
           <p>
             <strong>Note:</strong> Changing the app icon is a feature of{" "}
