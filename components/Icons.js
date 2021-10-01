@@ -40,6 +40,10 @@ const Icons = ({ icons }) => {
 
 const Container = styled.div`
   background-color: ${COLORS.dark};
+
+  div:last-child {
+    border-bottom: none;
+  }
 `;
 
 const Button = styled.button`

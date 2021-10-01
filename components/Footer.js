@@ -6,8 +6,7 @@ const Footer = () => {
     <StyledFooter>
       <div>
         <p>
-          Created by <Link href="https://twitter.com/PTRFRLL">@PTRFRLL</Link> |{" "}
-          {new Date().getFullYear()}
+          <span role="img" aria-label="built">🛠</span> by <Link href="https://twitter.com/PTRFRLL">@PTRFRLL</Link>
         </p>
       </div>
       <div>
