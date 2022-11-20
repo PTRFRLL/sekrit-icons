@@ -16,3 +16,7 @@ Within Apollo:
 
 _Hey Christian,_
 _Let me know if this takes the fun out of the secret icons. I'll happily take it down. I just really enjoy the icons and wanted to share them with others_
+
+## Contributing
+
+Find a missing icon? Add the icon to the [`data.js`](data.js) file and add an image to the `public/icons` folder

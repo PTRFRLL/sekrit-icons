@@ -84,7 +84,7 @@ export const ICONS = [
   {
     name: `Yo. Jonathan Here.`,
     icon: "/icons/jellyfish.png",
-    code: ["jellyfish", "tld"],
+    code: ["jellyfish", "tld", "crispy"],
   },
   {
     name: `Margaret`,
@@ -95,5 +95,15 @@ export const ICONS = [
     name: `Icons Drop Test`,
     icon: "/icons/pro.png",
     code: "everythingapplepro",
+  },
+  {
+    name: `ApolloBook Pro`,
+    icon: "/icons/apollobook.png",
+    code: "apollobookpro",
+  },
+  {
+    name: `Ukraine`,
+    icon: "/icons/ukraine.png",
+    code: "ukraine",
   },
 ];
